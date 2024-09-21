@@ -7,6 +7,9 @@ const SearchBar = ({ resetGallery }) => {
   };
 
   function handleSubmit(values, actions) {
+    if (values.searchRequest === "") {
+      return;
+    }
     console.log(values);
     resetGallery(values.searchRequest);
     console.log(values.searchRequest);

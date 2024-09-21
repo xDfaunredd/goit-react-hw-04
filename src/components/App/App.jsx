@@ -68,8 +68,10 @@ function App() {
 
   function resetGallery(searchRequest) {
     setQuery(searchRequest);
+
     setGallery([]);
     setPage(1);
+    setShowBtn(false);
   }
 
   return (
