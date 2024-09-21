@@ -1,5 +1,6 @@
 import { Field, Form, Formik } from "formik";
 import s from "./SearchBar.module.css";
+import toast from "react-hot-toast";
 
 const SearchBar = ({ resetGallery }) => {
   const initialValues = {
@@ -8,6 +9,7 @@ const SearchBar = ({ resetGallery }) => {
 
   function handleSubmit(values, actions) {
     if (values.searchRequest === "") {
+      toast.error(`The field is empty. Please enter a request.  `);
       return;
     }
     console.log(values);
